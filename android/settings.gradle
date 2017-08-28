@@ -1,0 +1,9 @@
+rootProject.name = 'NewLoginFb'
+include ':react-native-line-login'
+project(':react-native-line-login').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-line-login/android')
+include ':react-native-fbsdk'
+project(':react-native-fbsdk').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fbsdk/android')
+
+include ':app'
+include ':react-native-line-login', ':app'
+project(':react-native-line-login').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-line-login/android')
